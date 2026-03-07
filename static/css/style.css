@@ -185,6 +185,12 @@ section.diferenciais {
 /* =======================
    Formulário
 ======================= */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 form input {
     padding: 12px;
     margin: 10px;
@@ -203,11 +209,6 @@ form button {
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s;
-}
-
-form button:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
 }
 
 /* =======================
