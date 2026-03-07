@@ -129,21 +129,13 @@ Revisão técnica da declaração de imposto de renda para garantir conformidade
     </section>
 
     <!-- Formulário -->
-    <script>
-const form = document.querySelector(".form-container");
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const nome = document.getElementById("nome").value;
-    const whatsapp = document.getElementById("whatsapp").value.replace(/\D/g,''); // só números
-    const email = document.getElementById("email").value;
-
-    const mensagem = `Olá, meu nome é ${nome}. Gostaria de reservar minha declaração de IRPF.${email ? ' Meu e-mail é ' + email : ''}`;
-    const link = `https://wa.me/${whatsapp}?text=${encodeURIComponent(mensagem)}`;
-
-    window.open(link, "_blank");
-});
-</script>
+    <!-- Formulário -->  <section id="formulario">  
+    <h2>Reserve sua declaração</h2>  
+    <form method="POST">  
+        <input type="text" name="nome" placeholder="Seu nome" required>  
+        <input type="text" name="whatsapp" placeholder="WhatsApp com DDI" required>  
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar WhatsApp</button>  
+    </form>  
     </section>
 
     <!-- Footer moderno com cards -->
